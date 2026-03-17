@@ -1,8 +1,9 @@
 /* Custom Fonts */
 @font-face {
     font-family: 'Joyride';
-    src: url('../assets/fonts/Joyride-EXT.otf') format('opentype');
-    font-weight: 700;
+    src: url('../assets/fonts/Joyride-Ext.woff2') format('woff2'),
+         url('../assets/fonts/Joyride-Ext.otf') format('opentype');
+    font-weight: 700 900;
     font-style: normal;
     font-display: swap;
 }
