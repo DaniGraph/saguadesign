@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Sagua | Portafolio Completo</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Portfolio Specific Overrides */
+        #portfolio-hero {
+            padding-top: 150px;
+            padding-bottom: 80px;
+            text-align: center;
+        }
+        
+        .creative-portfolio {
+            padding-bottom: 120px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .showcase-item {
+            position: relative;
+            background: rgba(8, 11, 18, 0.4);
+            border: 1px solid rgba(0, 224, 255, 0.1);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .showcase-item.wide {
+            grid-column: span 2;
+        }
+
+        .showcase-item.tall {
+            grid-row: span 2;
+        }
+
+        .showcase-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--cyan);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .showcase-img-container {
+            width: 100%;
+            height: 350px; /* Base height increased */
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .showcase-item.tall .showcase-img-container {
+            height: 500px;
+        }
+
+        .showcase-item.wide .showcase-img-container {
+            height: 450px;
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .showcase-item:hover .showcase-img {
+            transform: scale(1.08); /* Zoom sutil al pasar el mouse */
+        }
+        
+        .showcase-item:hover .showcase-img-container {
+            transform: translateY(-10px); /* El bloque entero flota un poco */
+        }
+
+        /* Formas asimétricas para darle estilo creativo */
+        .shape-tall { height: 85vh; width: 60%; }
+        .shape-wide { height: 60vh; width: 85%; margin: 0 auto; display: block; }
+        
+        .showcase-content {
+            width: 100% !important;
+            padding: 30px;
+            margin: 0 !important;
+            background: transparent !important;
+            backdrop-filter: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            text-align: left !important;
+        }
+
+        .showcase-title {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .showcase-desc {
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .showcase-item.hidden {
+            display: none;
+        }
+
+        /* Variación para proyectos anchos (Full bleed o casi full bleed) */
+        .showcase-wide-item {
+            position: relative;
+            margin-bottom: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .showcase-wide-content {
+            margin-top: -80px;
+            width: 80%;
+            z-index: 2;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .creative-portfolio {
+                grid-template-columns: 1fr;
+            }
+            .showcase-item.wide, .showcase-item.tall {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            .showcase-img-container, .showcase-item.tall .showcase-img-container, .showcase-item.wide .showcase-img-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo" title="Daniel Sagua - Volver al Inicio">
+                    <svg width="40" height="40" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 38px; height: 38px;">
+                        <rect width="400" height="400" rx="40" fill="#080B12"/>
+                        <path d="M120 100V300H200C244.183 300 280 264.183 280 220C280 175.817 244.183 140 200 140H170V100H120Z" fill="url(#paint0_linear)"/>
+                        <path d="M150 220L280 300H340L210 220H150Z" fill="#00E0FF" fill-opacity="0.8"/>
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="120" y1="100" x2="280" y2="300" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0062FF"/>
+                                <stop offset="1" stop-color="#00E0FF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span style="font-size: 1.1rem; margin-left: 12px; letter-spacing: 2px; font-weight: 800;">SAGUA<span style="color: var(--primary);">.</span></span>
+                </a>
+                <div class="nav-links">
+                    <div class="nav-dropdown">
+                        <a href="index.html#proyectos">Proyectos <span style="font-size: 0.6rem; opacity: 0.5; margin-left: 4px;">▼</span></a>
+                        <div class="dropdown-content">
+                            <a href="portfolio.html">Ver Todo</a>
+                            <a href="portfolio.html?filter=branding">Branding</a>
+                            <a href="portfolio.html?filter=social-media">Social Media</a>
+                            <a href="portfolio.html?filter=web-design">Web Design</a>
+                            <a href="portfolio.html?filter=diagramacion">Diagramación</a>
+                        </div>
+                    </div>
+                    <a href="index.html#soluciones">Soluciones</a>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                        <button class="btn btn-primary" onclick="location.href='index.html#contacto'">Hablemos</button>
+                        <a href="https://wa.me/1234567890" target="_blank" class="btn btn-whatsapp" aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="portfolio-hero" class="container reveal-item active">
+            <span style="color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">Exhibición Creativa</span>
+            <h1 style="font-size: 3rem; margin-top: 16px; line-height: 1.2;">Obras <span class="tech-gradient">Destacadas.</span></h1>
+            <p style="color: var(--text-muted); font-size: 1.2rem; max-width: 600px; margin: 24px auto 40px;">Una exploración visual donde cada proyecto rompe el molde. No solo diseñamos marcas, creamos mundos digitales.</p>
+            
+            <!-- Filtros de Categoría -->
+            <div class="portfolio-filters" style="justify-content: center; margin-bottom: 60px;">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="social-media">Social Media</button>
+                <button class="filter-btn" data-filter="web-design">Web Design</button>
+                <button class="filter-btn" data-filter="diagramacion">Diagramación</button>
+            </div>
+        </section>
+
+        <section class="creative-portfolio container">
+            
+            <!-- Proyecto 1: Web Design (Wide) -->
+            <div class="showcase-item wide reveal-item active" data-category="web-design">
+                <a href="project-quantum.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=2000');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Web Design</span>
+                    <h2 class="showcase-title">Quantum Labs</h2>
+                    <p class="showcase-desc">Redefiniendo el ecosistema visual para un laboratorio de computación cuántica. Fusionamos precisión técnica con una estética futurista disruptiva.</p>
+                    <a href="project-quantum.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Estudio de Caso</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 2: Social Media (Normal) -->
+            <div class="showcase-item reveal-item active" data-category="social-media">
+                <a href="project-neon.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=1200');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Social Media</span>
+                    <h2 class="showcase-title">Neon Studio</h2>
+                    <p class="showcase-desc">Explosión de color y audacia para una agencia creativa digital. Un manifiesto visual diseñado para captar la atención en segundos.</p>
+                    <a href="project-neon.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Ver Estrategia</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 3: Branding (Tall) -->
+            <div class="showcase-item tall reveal-item active" data-category="branding">
+                <a href="project-arkadia.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&q=80&w=1200');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Branding</span>
+                    <h2 class="showcase-title">Arkadia Pay</h2>
+                    <p class="showcase-desc">Confianza y simplicidad extrema para el sector Fintech. Una identidad premium que proyecta seguridad en transacciones criptográficas.</p>
+                    <a href="project-arkadia.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Ver Identidad</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 4: Diagramación (Normal) -->
+            <div class="showcase-item reveal-item active" data-category="diagramacion">
+                <a href="project-vortex.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?auto=format&fit=crop&q=80&w=1200');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Diagramación</span>
+                    <h2 class="showcase-title">Vortex Systems</h2>
+                    <p class="showcase-desc">Visualización de datos complejos. Convertimos conceptos de ciberseguridad avanzada en esquemas técnicos elegantes y comprensibles.</p>
+                    <a href="project-vortex.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Ver Proyecto</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 5: Branding (Normal) -->
+            <div class="showcase-item reveal-item active" data-category="branding">
+                <a href="project-aether.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1549480130-365261891ce5?auto=format&fit=crop&q=80&w=1200');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Branding</span>
+                    <h2 class="showcase-title">Aether Luxe</h2>
+                    <p class="showcase-desc">Identidad visual para perfumería de alta gama. Minimalismo absoluto para productos artesanos de lujo.</p>
+                    <a href="project-aether.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Ver Proyecto</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 6: Branding (Normal) -->
+            <div class="showcase-item reveal-item active" data-category="branding">
+                <a href="project-prisma.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=1200');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Branding</span>
+                    <h2 class="showcase-title">Prisma Identity</h2>
+                    <p class="showcase-desc">Sistema de diseño dinámico para iluminación arquitectónica. Jugando con la refracción y el espectro visual.</p>
+                    <a href="project-prisma.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Ver Proyecto</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 7: Social Media (Wide) -->
+            <div class="showcase-item wide reveal-item active" data-category="social-media">
+                <a href="project-viral.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=2000');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Social Media</span>
+                    <h2 class="showcase-title">Viral Flow</h2>
+                    <p class="showcase-desc">Dirección creativa integral para influencers de alto nivel. Convertimos marcas personales en referentes visuales de tendencia global.</p>
+                    <a href="project-viral.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Ver Campaña</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 8: Web Design (Normal) -->
+            <div class="showcase-item reveal-item active" data-category="web-design">
+                <a href="project-zenith.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=1200');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Web Design</span>
+                    <h2 class="showcase-title">Zenith UI</h2>
+                    <p class="showcase-desc">Plataforma SaaS diseñada para la máxima productividad. Una interfaz disruptiva que elimina la fricción entre el usuario y sus metas.</p>
+                    <a href="project-zenith.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Explorar UI</a>
+                </div>
+            </div>
+
+            <!-- Proyecto 9: Branding (Normal) -->
+            <div class="showcase-item reveal-item active" data-category="branding">
+                <a href="project-skyline.html" class="showcase-img-container">
+                    <div class="showcase-img" style="background-image: url('https://images.unsplash.com/photo-1572044162444-ad60f128bde2?auto=format&fit=crop&q=80&w=1200');"></div>
+                </a>
+                <div class="showcase-content">
+                    <span class="showcase-tag">Branding</span>
+                    <h2 class="showcase-title">Skyline Studio</h2>
+                    <p class="showcase-desc">Identidad de marca para una firma de arquitectura urbana vanguardista. Reflejando solidez y líneas futuristas en cada trazo.</p>
+                    <a href="project-skyline.html" class="btn btn-outline" style="padding: 10px 24px; font-size: 0.85rem;">Ver Marca</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer style="padding: 40px 0; border-top: 1px solid var(--border); text-align: center; margin-top: 50px;">
+        <div class="container" style="color: var(--text-muted); font-size: 0.8rem;">
+            &copy; 2026 Daniel Sagua. Diseñando con intención.
+        </div>
+    </footer>
+
+    <!-- Use same observer/scroll animations -->
+    <script src="js/app.js"></script>
+</body>
+</html>

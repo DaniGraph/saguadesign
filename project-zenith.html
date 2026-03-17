@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith UI | Estudio de Caso by Daniel Sagua</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .case-hero {
+            height: 90vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 80px;
+            background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=2500');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, var(--bg-dark) 0%, rgba(8, 11, 18, 0.4) 50%, rgba(8, 11, 18, 0.1) 100%);
+            z-index: 1;
+        }
+
+        .case-header-content { position: relative; z-index: 2; width: 100%; }
+
+        .case-meta {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .meta-item h4 { color: var(--cyan); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .meta-item p { color: var(--text-main); font-size: 1rem; font-weight: 500; }
+
+        .module { padding: 100px 0; }
+        .module-text-img { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .module-text-img.reverse { grid-template-columns: 1fr 1fr; direction: rtl; }
+        .module-text-img.reverse > * { direction: ltr; }
+        .module-img { width: 100%; border-radius: var(--radius-lg); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .module-full-img { width: 100%; height: 70vh; object-fit: cover; border-radius: var(--radius-lg); margin: 60px 0; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+
+        .color-palette { display: flex; gap: 20px; margin-top: 40px; }
+        .color-swatch { flex: 1; height: 120px; border-radius: 16px; display: flex; align-items: flex-end; padding: 16px; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .next-project { padding: 120px 0; text-align: center; background: linear-gradient(to bottom, transparent, rgba(0, 98, 255, 0.05)); border-top: 1px solid var(--border); }
+
+        @media (max-width: 900px) { .module-text-img, .module-text-img.reverse { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <span style="font-size: 1.1rem; letter-spacing: 2px; font-weight: 800;">SAGUA<span style="color: var(--primary);">.</span></span>
+                </a>
+                <div class="nav-links">
+                    <a href="portfolio.html">Proyectos</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-hero reveal-item active">
+            <div class="container case-header-content">
+                <span style="color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; display: block; margin-bottom: 16px;">Product Design & SaaS UX</span>
+                <h1 style="font-size: 3.2rem; line-height: 1.2; max-width: 900px; margin-bottom: 24px;">Zenith UI: Productividad <span class="tech-gradient">Sin Fricción.</span></h1>
+                
+                <div class="case-meta">
+                    <div class="meta-item"><h4>Rol</h4><p>Lead UI/UX Designer</p></div>
+                    <div class="meta-item"><h4>Industria</h4><p>Software / Productivity</p></div>
+                    <div class="meta-item"><h4>Año</h4><p>2026</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="module container reveal-item active">
+            <div class="module-text-img">
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 24px; line-height: 1.2;">El <span class="tech-gradient">Interface</span></h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
+                        Zenith es un SaaS de gestión de proyectos para equipos creativos de alto rendimiento. En un mercado lleno de herramientas complejas, el objetivo fue reducir la carga cognitiva mediante una interfaz oscura ultra-limpia y atajos de teclado intuitivos.
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
+                        La arquitectura de la información se diseñó para que el usuario nunca esté a más de dos clics de cualquier acción crítica, utilizando una jerarquía visual basada en el contraste de colores neón sobre fondos profundos.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000" alt="SaaS Interface Preview" class="module-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="container reveal-item active">
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=2500" alt="UI System Panorama" class="module-full-img">
+        </section>
+
+        <section class="module container reveal-item active">
+            <div class="module-text-img reverse">
+                <div style="padding-right: 40px;">
+                    <h2 style="font-size: 2rem; margin-bottom: 24px; line-height: 1.2;">Eficiencia <span class="tech-gradient">Visual</span></h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
+                        Implementamos un Design System robusto donde cada componente sigue una retícula de 8px. La paleta de colores utiliza el "Zenith Green" como color de acción, guiando el ojo hacia los elementos interactivos de forma inmediata.
+                    </p>
+                    
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background-color: #0A0F1D;">Ghost Navy<br>#0A0F1D</div>
+                        <div class="color-swatch" style="background-color: #00FF94; color: #080B12;">Zenith Green<br>#00FF94</div>
+                        <div class="color-swatch" style="background-color: #718096;">Steel Blue<br>#718096</div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1581291518655-9523bb99d9f6?auto=format&fit=crop&q=80&w=1000" alt="Design Components" class="module-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="module container reveal-item active" style="padding-top: 0;">
+            <div style="text-align: center; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h2 style="font-size: 2rem; margin-bottom: 16px; line-height: 1.2;">Experiencia Desktop & Mobile</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem;">La experiencia se adapta sin fisuras entre dispositivos, manteniendo la misma potencia de gestión tanto en una pantalla de 32 pulgadas como en un smartphone, gracias a un sistema de componentes fluidos.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000" alt="Zenith Desktop" class="module-img">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000" alt="Zenith Mobile" class="module-img" style="margin-top: 50px;">
+            </div>
+        </section>
+
+        <section class="next-project reveal-item active">
+            <div class="container">
+                <span style="color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; display: block; margin-bottom: 16px;">Siguiente Caso de Estudio</span>
+                <a href="project-vortex.html" style="text-decoration: none;">
+                    <h2 style="font-size: 2.5rem; color: var(--text-main); margin-bottom: 24px; transition: color 0.3s; line-height: 1.2;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-main)'">Vortex Systems &rarr;</h2>
+                </a>
+                <a href="portfolio.html" class="btn btn-outline" style="margin-top: 24px;">Volver a Portafolio</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

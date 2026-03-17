@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Studio | Estudio de Caso by Daniel Sagua</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .case-hero {
+            height: 90vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 80px;
+            background-image: url('https://images.unsplash.com/photo-1572044162444-ad60f128bde2?auto=format&fit=crop&q=80&w=2500');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, var(--bg-dark) 0%, rgba(8, 11, 18, 0.4) 50%, rgba(8, 11, 18, 0.1) 100%);
+            z-index: 1;
+        }
+
+        .case-header-content { position: relative; z-index: 2; width: 100%; }
+
+        .case-meta {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .meta-item h4 { color: var(--cyan); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .meta-item p { color: var(--text-main); font-size: 1rem; font-weight: 500; }
+
+        .module { padding: 100px 0; }
+        .module-text-img { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .module-text-img.reverse { grid-template-columns: 1fr 1fr; direction: rtl; }
+        .module-text-img.reverse > * { direction: ltr; }
+        .module-img { width: 100%; border-radius: var(--radius-lg); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .module-full-img { width: 100%; height: 70vh; object-fit: cover; border-radius: var(--radius-lg); margin: 60px 0; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+
+        .color-palette { display: flex; gap: 20px; margin-top: 40px; }
+        .color-swatch { flex: 1; height: 120px; border-radius: 16px; display: flex; align-items: flex-end; padding: 16px; font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .next-project { padding: 120px 0; text-align: center; background: linear-gradient(to bottom, transparent, rgba(0, 98, 255, 0.05)); border-top: 1px solid var(--border); }
+
+        @media (max-width: 900px) { .module-text-img, .module-text-img.reverse { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <span style="font-size: 1.1rem; letter-spacing: 2px; font-weight: 800;">SAGUA<span style="color: var(--primary);">.</span></span>
+                </a>
+                <div class="nav-links">
+                    <a href="portfolio.html">Proyectos</a>
+                    <a href="index.html#contacto">Contacto</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-hero reveal-item active">
+            <div class="container case-header-content">
+                <span style="color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; display: block; margin-bottom: 16px;">Architectural Branding</span>
+                <h1 style="font-size: 3.2rem; line-height: 1.2; max-width: 900px; margin-bottom: 24px;">Skyline Studio: Construyendo el <span class="tech-gradient">Futuro Urbano.</span></h1>
+                
+                <div class="case-meta">
+                    <div class="meta-item"><h4>Rol</h4><p>Branding, Visual Strategy</p></div>
+                    <div class="meta-item"><h4>Industria</h4><p>Architecture / Real Estate</p></div>
+                    <div class="meta-item"><h4>Año</h4><p>2026</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="module container reveal-item active">
+            <div class="module-text-img">
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 24px; line-height: 1.2;">La <span class="tech-gradient">Estructura</span></h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
+                        Skyline Studio es una firma que diseña rascacielos inteligentes. La identidad debía ser tan imponente como sus edificios, basándose en la precisión matemática y la honestidad de los materiales: acero, cristal y luz.
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8;">
+                        Desarrollamos un logotipo modular que se adapta a diferentes formatos, manteniendo siempre una retícula estricta que guía cada decisión de diseño, desde la papelería hasta los carteles de obra a gran escala.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" alt="Skyscraper Architecture" class="module-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="container reveal-item active">
+            <img src="https://images.unsplash.com/photo-1449156001935-d28bc19b8175?auto=format&fit=crop&q=80&w=2500" alt="Urban Panorama" class="module-full-img">
+        </section>
+
+        <section class="module container reveal-item active">
+            <div class="module-text-img reverse">
+                <div style="padding-right: 40px;">
+                    <h2 style="font-size: 2rem; margin-bottom: 24px; line-height: 1.2;">Materialidad <span class="tech-gradient">Visual</span></h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; margin-bottom: 24px;">
+                        La paleta "Skyline Blue" se inspira en el reflejo del mediodía sobre fachadas de cristal. Se complementa con un gris concreto cálido para aportar humanidad y estabilidad a una marca altamente tecnológica.
+                    </p>
+                    
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background-color: #002C5B;">Deep Horizon<br>#002C5B</div>
+                        <div class="color-swatch" style="background-color: #517FA4;">Glass Blue<br>#517FA4</div>
+                        <div class="color-swatch" style="background-color: #DDE1E4; color: #080B12;">Cloud Concrete<br>#DDE1E4</div>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1503387762-592ed58ee44b?auto=format&fit=crop&q=80&w=1000" alt="Architecture Blueprints" class="module-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="module container reveal-item active" style="padding-top: 0;">
+            <div style="text-align: center; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h2 style="font-size: 2rem; margin-bottom: 16px; line-height: 1.2;">Portafolio Digital</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem;">La plataforma web actúa como una galería de arte, permitiendo que los renders fotorrealistas de los proyectos sean los protagonistas absolutos mediante un diseño de interfaz minimalista.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1000" alt="Office Interior" class="module-img">
+                <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bde2?auto=format&fit=crop&q=80&w=1000" alt="Skyline Building" class="module-img" style="margin-top: 50px;">
+            </div>
+        </section>
+
+        <section class="next-project reveal-item active">
+            <div class="container">
+                <span style="color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; display: block; margin-bottom: 16px;">Siguiente Caso de Estudio</span>
+                <a href="project-viral.html" style="text-decoration: none;">
+                    <h2 style="font-size: 2.5rem; color: var(--text-main); margin-bottom: 24px; transition: color 0.3s; line-height: 1.2;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-main)'">Viral Flow &rarr;</h2>
+                </a>
+                <a href="portfolio.html" class="btn btn-outline" style="margin-top: 24px;">Volver a Portafolio</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

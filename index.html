@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Sagua | Branding Specialist & Designer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap"
+        rel="stylesheet">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <a href="#hero" class="logo" title="Daniel Sagua - Branding Specialist">
+                    <!-- Modern Minimalist Logo SVG -->
+                    <svg width="40" height="40" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 38px; height: 38px;">
+                        <rect width="400" height="400" rx="40" fill="#080B12" />
+                        <path
+                            d="M120 100V300H200C244.183 300 280 264.183 280 220C280 175.817 244.183 140 200 140H170V100H120Z"
+                            fill="url(#paint0_linear)" />
+                        <path d="M150 220L280 300H340L210 220H150Z" fill="#00E0FF" fill-opacity="0.8" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="120" y1="100" x2="280" y2="300"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0062FF" />
+                                <stop offset="1" stop-color="#00E0FF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span style="font-size: 1.1rem; margin-left: 12px; letter-spacing: 2px; font-weight: 800;">SAGUA<span style="color: var(--primary);">.</span></span>
+                </a>
+                <div class="nav-links">
+                    <div class="nav-dropdown">
+                        <a href="#proyectos">Proyectos <span style="font-size: 0.6rem; opacity: 0.5; margin-left: 4px;">▼</span></a>
+                        <div class="dropdown-content">
+                            <a href="portfolio.html">Ver Todo</a>
+                            <a href="portfolio.html?filter=branding">Branding</a>
+                            <a href="portfolio.html?filter=social-media">Social Media</a>
+                            <a href="portfolio.html?filter=web-design">Web Design</a>
+                            <a href="portfolio.html?filter=diagramacion">Diagramación</a>
+                        </div>
+                    </div>
+                    <a href="#soluciones">Soluciones</a>
+                    <div style="display: flex; gap: 12px; align-items: center;">
+                        <button class="btn btn-primary" onclick="location.href='#contacto'">Hablemos</button>
+                        <a href="https://wa.me/51928889043" target="_blank" class="btn btn-whatsapp"
+                            aria-label="WhatsApp">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <!-- Mobile Hamburger Button -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <nav class="mobile-nav">
+            <div class="mobile-nav-dropdown">
+                <span class="mobile-nav-label">Proyectos</span>
+                <a href="portfolio.html">Ver Todo</a>
+                <a href="portfolio.html?filter=branding">Branding</a>
+                <a href="portfolio.html?filter=social-media">Social Media</a>
+                <a href="portfolio.html?filter=web-design">Web Design</a>
+                <a href="portfolio.html?filter=diagramacion">Diagramación</a>
+            </div>
+            <a href="#soluciones" class="mobile-nav-link">Soluciones</a>
+            <a href="#contacto" class="mobile-nav-link btn btn-primary" style="margin-top: 16px;">Hablemos</a>
+            <a href="https://wa.me/51928889043" target="_blank" class="mobile-nav-link btn btn-whatsapp" style="margin-top: 12px; width: fit-content; gap: 10px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.489-1.761-1.663-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </a>
+        </nav>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section - Propuesta 02: Digital Monolith -->
+        <section id="hero" class="hero-v2" style="min-height: 100vh;">
+            <div id="liquid-bg" class="hero-liquid-bg"></div> <!-- Mantener compatibilidad con JS cursor -->
+            <div class="hero-grid-overlay"></div>
+
+            <div class="container" style="position: relative; z-index: 5;">
+                <div class="reveal-item" style="display: flex; justify-content: space-between; align-items: center; gap: 60px; width: 100%;">
+                    <!-- Contenido Principal -->
+                    <div style="flex: 1;">
+                        <span
+                            style="color: var(--cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 5px; font-size: 0.8rem; display: block; margin-bottom: 24px;">ESPECIALISTA
+                            EN DISEÑO & IDENTIDAD VISUAL</span>
+                        <h1 class="brutal-title">
+                            <span class="outline"
+                                style="font-size: 0.55em; display: block; line-height: 1.2; margin-bottom: 8px;">Diseñando
+                                el <br> futuro de las</span>
+                            <span class="tech-gradient spotlight-text">Marcas digitales</span>
+                        </h1>
+
+                        <p
+                            style="color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin-bottom: 48px; line-height: 1.6;">
+                            Construyo identidades visuales memorables que trascienden lo convencional para proyectar la
+                            autoridad y el liderazgo que tu negocio requiere en el mundo digital.
+                        </p>
+
+                        <div style="display: flex; gap: 20px; flex-wrap: nowrap; align-items: center;">
+                            <a href="portfolio.html" class="btn-brutal" style="white-space: nowrap;">Ver Mi Trabajo</a>
+                            <a href="#contacto" class="btn-brutal-outline" style="white-space: nowrap;">Empezar Proyecto</a>
+                        </div>
+                    </div>
+
+                    <!-- Branding Blueprint Widget (Derecha) -->
+                    <div class="brand-specs-widget">
+                        <div class="logo-construction-grid">
+                            
+                            <span class="brand-metric-tag" style="top: -25px; left: 50%; transform: translateX(-50%);">Golden Ratio Analysis</span>
+                            <span class="brand-metric-tag" style="bottom: 30%; right: -55px; transform: rotate(90deg);">Curvature: 1.618</span>
+                            <span class="brand-metric-tag" style="top: 30%; left: -55px; transform: rotate(-90deg);">Axis Alignment: 90°</span>
+                            
+                            <!-- Technical Grid Lines -->
+                            <div style="position: absolute; width: 1px; height: 140%; background: rgba(0,224,255,0.08);"></div>
+                            <div style="position: absolute; width: 140%; height: 1px; background: rgba(0,224,255,0.08);"></div>
+                            <!-- Diagonal Guides -->
+                            <div style="position: absolute; width: 140%; height: 0.5px; background: rgba(255,255,255,0.05); transform: rotate(45deg);"></div>
+                            <div style="position: absolute; width: 140%; height: 0.5px; background: rgba(255,255,255,0.05); transform: rotate(-45deg);"></div>
+                            <!-- Fibonacci-style circles -->
+                            <div style="position: absolute; width: 220px; height: 220px; border: 0.5px dashed rgba(0,224,255,0.1); border-radius: 50%;"></div>
+                            <div style="position: absolute; width: 140px; height: 140px; border: 0.5px dashed rgba(0,224,255,0.1); border-radius: 50%;"></div>
+                        </div>
+
+                        <div class="brand-color-strip" style="margin-top: 360px;">
+                            <div class="color-dot" style="background: var(--bg-dark);"></div>
+                            <div class="color-dot" style="background: var(--primary);"></div>
+                            <div class="color-dot" style="background: var(--cyan);"></div>
+                            <div class="color-dot" style="background: white;"></div>
+                            <span class="brand-metric-tag" style="margin-left: 10px; position: static;">Palette Sync: Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restore Animated Scroll Arrow -->
+            <a href="#proyectos" class="scroll-arrow reveal-item reveal-delay-3" aria-label="Desplazar hacia abajo"
+                style="display: block;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </section>
+        
+        <!-- Portfolio Category Showcase (Full Width) -->
+        <section id="proyectos" style="padding: 60px 0 0 0; background: radial-gradient(circle at center, rgba(0,98,255,0.02) 0%, transparent 70%);">
+            <div class="container" style="margin-bottom: 40px; text-align: center;">
+                    <div class="reveal-item">
+                        <span style="color: var(--cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; display: block; margin-bottom: 8px;">Selección de Proyectos</span>
+                        <h2 style="font-size: 2.8rem; line-height: 1.1; font-weight: 800;">Impacto <span class="tech-gradient">Visual Destacado</span></h2>
+                    </div>
+                </div>
+
+                <div class="category-showcase reveal-item">
+                <!-- Branding -->
+                <a href="portfolio.html?filter=branding" class="category-column">
+                    <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&q=80&w=1200');"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-tag">Estrategia & Identidad</span>
+                        <h3 class="category-title">Branding</h3>
+                    </div>
+                </a>
+
+                <!-- Social Media -->
+                <a href="portfolio.html?filter=social-media" class="category-column">
+                    <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=1200');"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-tag">Dirección Creativa</span>
+                        <h3 class="category-title">Social Media</h3>
+                    </div>
+                </a>
+
+                <!-- Web Design -->
+                <a href="portfolio.html?filter=web-design" class="category-column">
+                    <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=1200');"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-tag">UX/UI & Dev Support</span>
+                        <h3 class="category-title">Web Design</h3>
+                    </div>
+                </a>
+
+                <!-- Diagramación -->
+                <a href="portfolio.html?filter=diagramacion" class="category-column">
+                    <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1634152962476-4b8a00e1915c?auto=format&fit=crop&q=80&w=1200');"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <span class="category-tag">Data Visualization</span>
+                        <h3 class="category-title">Diagramación</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Clients Section -->
+        <section id="trust-clients" style="padding: 100px 0; border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.2); position: relative;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 40px;" class="reveal-item">
+                     <span style="color: rgba(255,255,255,0.2); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem;">Alianzas Estratégicas & Partners</span>
+                </div>
+                
+                <div class="client-grid reveal-item">
+                    <div class="client-logo"><span>Arkadia Pay</span></div>
+                    <div class="client-logo"><span>Quantum Labs</span></div>
+                    <div class="client-logo"><span>Neon Studio</span></div>
+                    <div class="client-logo"><span>Vortex Systems</span></div>
+                    <div class="client-logo"><span>Zenith UI</span></div>
+                    <div class="client-logo"><span>Aether Luxe</span></div>
+                    <div class="client-logo"><span>Viral Flow</span></div>
+                    <div class="client-logo"><span>Prisma ID</span></div>
+                    <div class="client-logo"><span>Skyline Studio</span></div>
+                    <div class="client-logo"><span>Urban Dev</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section (Visual Skills) -->
+        <section id="soluciones" class="container" style="padding: 120px 24px; position: relative;">
+            <div style="text-align: center; margin-bottom: 80px;" class="reveal-item">
+                <span
+                    style="color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; display: block; margin-bottom: 16px;">Arquitectura de Sistemas & Diseño</span>
+                <h2 style="font-size: 3rem; line-height: 1.1;">Mi <span
+                        class="tech-gradient spotlight-text">Armería</span></h2>
+            </div>
+
+            <div id="skills-main-grid"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+
+                <!-- Left: Interactive Core Competencies (Accordion) -->
+                <div class="reveal-item" style="display: flex; flex-direction: column; gap: 16px;">
+                    <h3 style="margin-bottom: 24px; font-size: 1.8rem; display: flex; align-items: center; gap: 12px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                        Core Competencies
+                    </h3>
+
+                    <!-- Accordion Items -->
+                    <div class="skill-accordion glass" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <span class="acc-icon text-glow">▸</span>
+                            <h4>Estrategia de Marca & Identidad Visual</h4>
+                        </div>
+                        <div class="accordion-content">
+                            <p>No se trata sólo de logotipos bonitos; esculpo ADN corporativo. Trasciendo tendencias
+                                pasajeras creando sistemas de diseño identitarios que escalan, perduran y hablan
+                                directamente a los instintos más profundos de tu audiencia objetivo.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-accordion glass" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <span class="acc-icon text-glow">▸</span>
+                            <h4>Diseño de Interfaces (UI/UX)</h4>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Cada píxel calculado para retener atención. Diseñamos viajes interactivos donde la
+                                fricción se elimina matemáticamente mediante flujos cognitivos, interacciones fluidas
+                                (micro-animaciones) y layouts inmersivos de alta conversión.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-accordion glass" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <span class="acc-icon text-glow">▸</span>
+                            <h4>Dirección de Arte Digital</h4>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Tomo el timón visual fusionando fotografía, tipografía cruda, renders 3D y elementos neón
+                                en un manifiesto coherente e impactante. Todo regulado bajo una meticulosa supervisión
+                                de la atmósfera general de la marca en todos los frentes.</p>
+                        </div>
+                    </div>
+
+                    <div class="skill-accordion glass" onclick="toggleAccordion(this)">
+                        <div class="accordion-header">
+                            <span class="acc-icon text-glow">▸</span>
+                            <h4>Modelado 3D & Motion Graphics</h4>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Añadimos la dimensión "Z" al diseño. Creamos activos tridimensionales y animaciones
+                                físicas in-browser para generar ese "Efecto WOW", combinando herramientas que dotan de
+                                vitalidad y presencia casi tangible al entorno web.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Tooling / Dashboard Interface -->
+                <div class="reveal-item reveal-delay-2" style="position: relative;">
+                    <!-- Decorative back target ring -->
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; height: 300px; border: 1px dashed rgba(0, 224, 255, 0.2); border-radius: 50%; z-index: 0; pointer-events: none; animation: spinTarget 30s linear infinite;">
+                    </div>
+
+                    <div class="glass"
+                        style="padding: 50px; height: 100%; position: relative; z-index: 1; border: 1px solid rgba(0,98,255,0.3); background: radial-gradient(circle at top right, rgba(0,98,255,0.1), transparent 60%);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 40px;">
+                            <h3
+                                style="font-size: 1.8rem; padding-bottom: 12px; border-bottom: 2px solid var(--primary); display: inline-block;">
+                                Software <span style="color: var(--cyan);">&</span> Stack</h3>
+                            <div
+                                style="width: 40px; height: 40px; border: 1px solid var(--cyan); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--cyan);">
+                                ⌘</div>
+                        </div>
+
+                        <div class="software-grid">
+                            <!-- Illustrator -->
+                            <div class="software-box box-ai">
+                                <div class="software-icon-place">Ai</div>
+                                <span class="software-label">Illustrator</span>
+                            </div>
+                            
+                            <!-- InDesign -->
+                            <div class="software-box box-id">
+                                <div class="software-icon-place">Id</div>
+                                <span class="software-label">InDesign</span>
+                            </div>
+
+                            <!-- Photoshop -->
+                            <div class="software-box box-ps">
+                                <div class="software-icon-place">Ps</div>
+                                <span class="software-label">Photoshop</span>
+                            </div>
+
+                            <!-- After Effects -->
+                            <div class="software-box box-ae">
+                                <div class="software-icon-place">Ae</div>
+                                <span class="software-label">After Effects</span>
+                            </div>
+
+                            <!-- Media Encoder -->
+                            <div class="software-box box-me">
+                                <div class="software-icon-place">Me</div>
+                                <span class="software-label">Encoder</span>
+                            </div>
+
+                            <!-- Figma -->
+                            <div class="software-box box-fig">
+                                <div class="software-icon-place">Fi</div>
+                                <span class="software-label">Figma</span>
+                            </div>
+
+                            <!-- Cinema 4D -->
+                            <div class="software-box box-c4d">
+                                <div class="software-icon-place">C4</div>
+                                <span class="software-label">Cinema 4D</span>
+                            </div>
+
+                            <!-- Gemini -->
+                            <div class="software-box box-gem">
+                                <div class="software-icon-place">Ge</div>
+                                <span class="software-label">Gemini</span>
+                            </div>
+
+                            <!-- ChatGPT -->
+                            <div class="software-box box-gpt">
+                                <div class="software-icon-place">Gt</div>
+                                <span class="software-label">ChatGPT</span>
+                            </div>
+
+                            <!-- Make -->
+                            <div class="software-box box-make">
+                                <div class="software-icon-place">Mk</div>
+                                <span class="software-label">Make</span>
+                            </div>
+
+                            <!-- Antigravity -->
+                            <div class="software-box box-anti">
+                                <div class="software-icon-place">Ag</div>
+                                <span class="software-label">Antigravity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <!-- Testimonials -->
+        <section id="clientes" style="background: rgba(0, 98, 255, 0.03); position: relative; overflow: hidden;">
+            <!-- Background glow for testimonials -->
+            <div
+                style="position: absolute; top: 30%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0, 224, 255, 0.08) 0%, transparent 70%); border-radius: 50%; filter: blur(60px); pointer-events: none;">
+            </div>
+
+            <div class="container relative z-10">
+                <div style="text-align: center; margin-bottom: 80px;" class="reveal-item">
+                    <span
+                        style="color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; display: block; margin-bottom: 16px;">Veredicto</span>
+                    <h2 style="font-size: 2.5rem; line-height: 1.2;">Lo que dicen mis <span
+                            class="tech-gradient spotlight-text">clientes</span></h2>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; align-items: start;">
+
+                    <!-- Columna 1 -->
+                    <div style="display: flex; flex-direction: column; gap: 32px;">
+                        <div class="glass reveal-item"
+                            style="padding: 40px; border-top: 2px solid var(--primary); background: linear-gradient(180deg, rgba(0,98,255,0.05) 0%, rgba(8,11,18,0.7) 100%); transition: transform 0.3s; cursor: default;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--cyan)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--primary)';">
+                            <div
+                                style="color: var(--cyan); font-size: 2rem; font-family: 'Times New Roman', serif; line-height: 0; margin-bottom: 20px;">
+                                "</div>
+                            <p
+                                style="font-style: italic; margin-bottom: 30px; line-height: 1.8; color: var(--text-main);">
+                                Transformó nuestra marca en algo que ahora se siente del futuro. Su ojo para el branding
+                                tecnológico espacial y profundo es sencillamente incomparable en todo el mercado.</p>
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div
+                                    style="width: 48px; height: 48px; border-radius: 50%; background: #002244; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--text-main); font-family: var(--font-heading);">
+                                    MR</div>
+                                <div>
+                                    <div style="font-weight: 700; color: white;">Marco Ruiz</div>
+                                    <div
+                                        style="color: var(--cyan); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
+                                        CEO @ Quantum Labs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass reveal-item reveal-delay-2"
+                            style="padding: 40px; border-left: 2px solid var(--cyan); background: rgba(8, 11, 18, 0.4); transition: transform 0.3s; cursor: default;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--cyan)';">
+                            <div
+                                style="color: var(--primary); font-size: 2rem; font-family: 'Times New Roman', serif; line-height: 0; margin-bottom: 20px;">
+                                "</div>
+                            <p
+                                style="font-style: italic; margin-bottom: 30px; line-height: 1.8; color: var(--text-muted);">
+                                La estética que Daniel aporta es pura innovación radical. Cada pantalla que diseñó para
+                                nuestra plataforma se siente adelantada unos cinco años a nuestra época actual. Un
+                                arquitecto visual.</p>
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div
+                                    style="width: 48px; height: 48px; border-radius: 50%; background: #001A33; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--text-main); font-family: var(--font-heading);">
+                                    ER</div>
+                                <div>
+                                    <div style="font-weight: 700; color: white;">Elena Rostova</div>
+                                    <div
+                                        style="color: var(--primary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
+                                        VP Product @ Neon Studio</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna 2 (Escalonada hacia abajo) -->
+                    <div style="display: flex; flex-direction: column; gap: 32px; padding-top: 60px;">
+                        <div class="glass reveal-item reveal-delay-1"
+                            style="padding: 40px; border-bottom: 2px solid var(--cyan); background: linear-gradient(0deg, rgba(0,224,255,0.05) 0%, rgba(8,11,18,0.7) 100%); transition: transform 0.3s; cursor: default;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--primary)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--cyan)';">
+                            <div
+                                style="color: var(--cyan); font-size: 2rem; font-family: 'Times New Roman', serif; line-height: 0; margin-bottom: 20px;">
+                                "</div>
+                            <p
+                                style="font-style: italic; margin-bottom: 30px; line-height: 1.8; color: var(--text-main);">
+                                Minimalista, profesional y con una ejecución impecable. El proceso de diseño fue hiper
+                                fluido desde el día uno y el resultado es más una obra de arte digital que una web.</p>
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div
+                                    style="width: 48px; height: 48px; border-radius: 50%; background: #003366; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--text-main); font-family: var(--font-heading);">
+                                    SC</div>
+                                <div>
+                                    <div style="font-weight: 700; color: white;">Sara Connor</div>
+                                    <div
+                                        style="color: var(--cyan); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
+                                        Founder @ Arkadia Pay</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="glass reveal-item reveal-delay-3"
+                            style="padding: 40px; border-right: 2px solid var(--primary); background: rgba(8, 11, 18, 0.4); transition: transform 0.3s; cursor: default;"
+                            onmouseover="this.style.transform='translateY(-10px)'; this.style.borderColor='var(--cyan)';"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--primary)';">
+                            <div
+                                style="color: var(--primary); font-size: 2rem; font-family: 'Times New Roman', serif; line-height: 0; margin-bottom: 20px;">
+                                "</div>
+                            <p
+                                style="font-style: italic; margin-bottom: 30px; line-height: 1.8; color: var(--text-muted);">
+                                Nos entregó muchísimo más que un simple logo; nos proporcionó un sistema geométrico y
+                                digital completo que logró escalar nuestra startup de ciberseguridad a la serie A.</p>
+                            <div style="display: flex; align-items: center; gap: 16px;">
+                                <div
+                                    style="width: 48px; height: 48px; border-radius: 50%; background: #001122; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--text-main); font-family: var(--font-heading);">
+                                    DC</div>
+                                <div>
+                                    <div style="font-weight: 700; color: white;">David Chen</div>
+                                    <div
+                                        style="color: var(--primary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">
+                                        CTO @ Vortex Systems</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <!-- Premium Full-Screen Contact Section -->
+        <section id="contacto"
+            style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 0;">
+            <!-- Ambient Background Elements specifically for Contact -->
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
+                <div
+                    style="position: absolute; bottom: -20%; right: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(0, 224, 255, 0.15) 0%, transparent 70%); border-radius: 50%; filter: blur(80px);">
+                </div>
+                <div
+                    style="font-family: var(--font-heading); font-size: 18vw; font-weight: 800; color: rgba(255,255,255,0.02); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); white-space: nowrap; user-select: none;">
+                    HABLEMOS</div>
+            </div>
+
+            <div class="container"
+                style="z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; width: 100%; align-items: center;">
+
+                <!-- Left Column: Editorial Typography -->
+                <div class="reveal-item">
+                    <span
+                        style="color: var(--cyan); font-weight: 600; text-transform: uppercase; letter-spacing: 4px; font-size: 0.85rem; display: block; margin-bottom: 24px;">Inicia
+                        la Secuencia</span>
+                    <h2 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 32px;">Vamos a crear <br> algo <span
+                            class="tech-gradient spotlight-text">Épico.</span></h2>
+                    <p
+                        style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 40px; max-width: 90%; line-height: 1.8;">
+                        Desafía lo convencional. Ya sea que necesites un rebranding completo o una interfaz digital del
+                        futuro, estoy listo para estructurarlo y diseñarlo.</p>
+
+                    <div style="display: flex; flex-direction: column; gap: 32px;">
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <div
+                                style="width: 56px; height: 56px; border-radius: 50%; background: rgba(0, 98, 255, 0.1); border: 1px solid rgba(0, 224, 255, 0.2); display: flex; align-items: center; justify-content: center; color: var(--cyan); box-shadow: 0 0 20px rgba(0,224,255,0.1);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4
+                                    style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 4px; font-family: var(--font-body); font-weight: 500; text-transform: uppercase; letter-spacing: 2px;">
+                                    Transmisión Directa</h4>
+                                <div style="font-size: 1.2rem; font-weight: 600; color: white;">daniel.sagua.design@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 20px;">
+                            <div
+                                style="width: 56px; height: 56px; border-radius: 50%; background: rgba(0, 98, 255, 0.1); border: 1px solid rgba(0, 224, 255, 0.2); display: flex; align-items: center; justify-content: center; color: var(--cyan); box-shadow: 0 0 20px rgba(0,224,255,0.1);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4
+                                    style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 4px; font-family: var(--font-body); font-weight: 500; text-transform: uppercase; letter-spacing: 2px;">
+                                    Base de Operaciones</h4>
+                                <div style="font-size: 1.2rem; font-weight: 600; color: white;">Lima, Perú & Global
+                                    Remote</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Neon Minimalist Form -->
+                <div class="reveal-item reveal-delay-2">
+                    <form class="glass" id="contact-form"
+                        action="https://formsubmit.co/daniel.sagua.design@gmail.com"
+                        method="POST"
+                        style="padding: 50px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 40px 100px rgba(0,0,0,0.6); background: rgba(8, 11, 18, 0.7);">
+                        <!-- FormSubmit config -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde danielsagua.design">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://danielsagua.design/?enviado=1">
+
+                        <div style="margin-bottom: 32px; position: relative;">
+                            <label
+                                style="display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 8px;">Tu
+                                Nombre / Entidad</label>
+                            <input type="text" required
+                                style="width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 12px 0; color: white; font-size: 1.2rem; outline: none; transition: 0.3s; font-family: var(--font-body);"
+                                onfocus="this.style.borderColor='var(--cyan)'; this.style.boxShadow='0 10px 10px -10px var(--cyan)'"
+                                onblur="this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='none'">
+                        </div>
+
+                        <div style="margin-bottom: 32px; position: relative;">
+                            <label
+                                style="display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 8px;">Frecuencia
+                                / Email</label>
+                            <input type="email" required
+                                style="width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 12px 0; color: white; font-size: 1.2rem; outline: none; transition: 0.3s; font-family: var(--font-body);"
+                                onfocus="this.style.borderColor='var(--cyan)'; this.style.boxShadow='0 10px 10px -10px var(--cyan)'"
+                                onblur="this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='none'">
+                        </div>
+
+                        <div style="margin-bottom: 48px; position: relative;">
+                            <label
+                                style="display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 8px;">Carga
+                                de Datos / Proyecto</label>
+                            <textarea rows="4" required
+                                style="width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 12px 0; color: white; font-size: 1.2rem; outline: none; resize: none; transition: 0.3s; font-family: var(--font-body);"
+                                onfocus="this.style.borderColor='var(--cyan)'; this.style.boxShadow='0 10px 10px -10px var(--cyan)'"
+                                onblur="this.style.borderColor='rgba(255,255,255,0.15)'; this.style.boxShadow='none'"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary"
+                            style="width: 100%; padding: 18px 40px; font-size: 1.1rem; letter-spacing: 2px; display: flex; justify-content: center; align-items: center; gap: 12px; border-radius: 100px;">
+                            <span>Iniciar Transmisión</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main><!-- /#main-content -->
+
+    <footer style="padding: 40px 0; border-top: 1px solid var(--border); text-align: center;">
+        <div class="container" style="color: var(--text-muted); font-size: 0.8rem;">
+            &copy; 2026 Daniel Sagua. Diseñando con intención.
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
